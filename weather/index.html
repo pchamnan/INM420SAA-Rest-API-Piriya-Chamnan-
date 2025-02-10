@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Ensure proper rendering and touch zooming on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <!-- Main container for the entire application -->
+    <div class="container">
+        <!-- Weather application wrapper -->
+        <div class="weather-app">
+            <!-- Application title -->
+            <h1>☁️ Weather Dashboard</h1>
+            
+            <!-- Search section with city selection dropdown and search button -->
+            <div class="search-box">
+                <select id="citySelect" class="city-select">
+                    <option value="">-- Select a City --</option>
+                    <option value="Toronto">Toronto</option>
+                    <option value="London">London</option>
+                    <option value="New York">New York</option>
+                    <option value="Tokyo">Tokyo</option>
+                </select>
+                <button onclick="getWeather()" class="search-button">
+                    🔍 Check Weather
+                </button>
+            </div>
+
+            <!-- Container for displaying status messages (loading, error, etc.) -->
+            <div id="messageContainer" class="message-container"></div>
+            
+            <!-- Section for displaying current weather and air quality -->
+            <div class="current-conditions">
+                <div id="weatherResult" class="weather-result"></div>
+                <div id="airQuality" class="air-quality"></div>
+            </div>
+            
+            <!-- Section for displaying weather forecast -->
+            <div id="forecast" class="forecast-container">
+                <h2>Extended Forecast</h2>
+                <div id="forecastCards" class="forecast-cards"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Link to JavaScript file -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
